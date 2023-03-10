@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if(!isset($_COOKIE['status'])){
+  header('location: login.php?err=bad_request');
+}
+
+?>
+
 <html>
 <head>
     <title>Lab5</title>
@@ -60,5 +70,7 @@
     </table>
     </body>
     </html>
+
+
 
 

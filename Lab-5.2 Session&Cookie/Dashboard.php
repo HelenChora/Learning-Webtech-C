@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    if(!isset($_COOKIE['status'])){
+        header('location: Login.php?err=bad_request');
+    }
+
+?>
 <html>
 <head>
     <title>Lab5</title>
@@ -20,19 +27,19 @@
                 <h1>Account</h1><hr>
                 <ul>
                     <li>
-                        <a href="Dashboard.html">Dashboard</a>
+                        <a href="Dashboard.php">Dashboard</a>
                     </li>
                     <li>
-                        <a href="View profile.html">View Profile</a>
+                        <a href="View profile.php">View Profile</a>
                     </li>
                     <li>
-                        <a href="Edit profile.html">Edit Profile</a>
+                        <a href="Edit profile.php">Edit Profile</a>
                     </li>
                     <li>
-                        <a href="Profile picture.html">Profile Picture</a>
+                        <a href="Profile picture.php">Profile Picture</a>
                     </li>
                     <li>
-                        <a href="Change password.html">Change Password</a>
+                        <a href="Change password.php">Change Password</a>
                     </li>
                     <li>
                         <a href="Logout.html">Logout</a>

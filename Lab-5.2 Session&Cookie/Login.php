@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+ 
+
+?> 
+
 <html>
 <head>
     <title>Lab5</title>

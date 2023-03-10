@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+if(!isset($_COOKIE['status'])){
+  header('location: login.php?err=bad_request');
+}
+
+?>
 <html>
 <head>
     <title>Lab5</title>
@@ -42,34 +51,27 @@
             <td>
                 <fieldset>
                     <legend>
-                        <h3>Edit Profile</h3></legend>
+                        <h3>PROFILE</h3></legend>
                         <label for="name">Name:</label>
                         <input type="text" value="Bob"><br><br>
                        <label for="email">Email:</label>
                        <input type="email"  value="bob@aiub.edu"><br><br>
-                       <input type="radio" id="male" name="gender" value="Male"></input>
-                            <label for="male">Male</label>
-                            <input type="radio" id="female" name="gender" value="Female"></input>
-                            <label for="female">Female</label>
-                            <input type="radio" id="other" name="gender" value="Other"></input>
-                            <label for="other">Other</label><br><br>
-                            <input type="text" style="width: 20px;">
-                            <p style="display: inline;">/</p>
-                            <input type="text" style="width: 20px;">
-                            <p style="display: inline;">/</p>
-                            <input type="text" style="width: 20px;"><br><br>
-                            <p style="display: inline;">(dd/mm/yyyy)</p><br><br>
-                            <button type="submit">Submit</button>
-                            </fieldset>
+                       <label for="gender">Gender:</label>
+                       <input type="gender" value="Male"><br><br>
+                       <label for="DOB">Date of Birth:</label>
+                       <input type="DOB" value="19/09/1998"><br><br>
+                       <img align="right" src="pic.jpg" width="100"height="100">
+                       <a href="">Change</a> 
+                       </fieldset>
+                       </td>
+                       </tr>
+                       </table>
+                       <table border="1" cellspacing="0" height="25px" width="100%">
+                        <tr>
+                            <td>
+                                <footer style="text-align: center;">Copyright © 2017</footer>
                             </td>
-                            </tr>
-                            </table>
-                            <table border="1" cellspacing="0" height="25px" width="100%">
-                                <tr>
-                                    <td>
-                                        <footer style="text-align: center;">Copyright © 2017</footer>
-                                    </td>
-                                </tr>
-                                </table>
-                                </body>
-                                </html>
+                        </tr>
+                    </table>
+                    </body>
+                    </html>
